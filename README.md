@@ -66,7 +66,7 @@ either `true` to cache the results, `false` to not cache it, or a valid
 ## How it works
 
 Cacher intercepts any find query and temporarily changes the datasource to one 
-that handle's checking the cache..
+that handle's checking the cache.
 
 You can always disable Cacher by using `Behavior::detach()` or
 `Behavior::disable()`.
@@ -80,12 +80,12 @@ You can always disable Cacher by using `Behavior::detach()` or
 ## Todo
 
 * I'd like to add other caching functionality to make it more all-in-one
-* Would like to make the Cache datasource a reuseable, standalone datasource
+* Would like to make the Cache datasource a reusable, standalone datasource
 
 ## Notes
 
-Since Cacher caches the entire results of a find, some cache can become stale
-before it's parent does. For example, let's say you cache the results of finding 
+Since Cacher caches the entire results of a find, some cached child data can become stale
+before its parent does. For example, let's say you cache the results of finding 
 a post and containing all comments. If a comment is deleted and the cache remains, 
 it will show that comment. The only way to remove it would be to invalidate the
 original query on the Post model. Ideas around this have been passed around
