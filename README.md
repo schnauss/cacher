@@ -66,7 +66,7 @@ either `true` to cache the results, `false` to not cache it, or a valid
 ## How it works
 
 Cacher intercepts any find query and temporarily changes the datasource to one 
-that handle's checking the cache..
+that handles checking the cache.
 
 You can always disable Cacher by using `Behavior::detach()` or
 `Behavior::disable()`.
